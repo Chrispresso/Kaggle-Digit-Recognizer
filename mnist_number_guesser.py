@@ -19,6 +19,7 @@ class MNISTPain(object):
     def __init__(self):
         self.prediction_txt = 'Prediction:         '
         self.root = Tk()
+        self.root.resizable(False, False)  # Don't allow resize
         self.CANVAS_WIDTH = 280
         self.CANVAS_HEIGHT = 280
         self.model = load_MNIST_model('mnist_cnn_model.h5')
